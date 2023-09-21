@@ -1,0 +1,6 @@
+<div>
+    <button class="btn btn-primary" (click)="img = 'https://images.pexels.com/photos/17888759/pexels-photo-17888759/free-photo-of-playa-rojo-arena-blanco.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'">Imagen 1</button>
+    <button class="btn btn-danger mx-2" (click)="img = 'https://images.pexels.com/photos/18091364/pexels-photo-18091364/free-photo-of-paisaje-verano-bosque-lago.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'">Imagen 2 </button>
+    <button class="btn btn-secondary" (click)="img = 'https://images.pexels.com/photos/18403937/pexels-photo-18403937/free-photo-of-festival-alto-noria-divertido.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'">Regresar</button>
+</div>
+<img [src]="img" alt="">
