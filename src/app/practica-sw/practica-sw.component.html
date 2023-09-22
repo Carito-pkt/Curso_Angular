@@ -1,0 +1,23 @@
+<h1>Bienvenido a KG boutique</h1>
+<h2>Sección de catalogo de ropa</h2>
+<h3>***********MENU***************</h3>
+<div class="opciones_Menu">
+    <ul>
+        <li>1. Vestidos</li>
+        <li>2. Pantalones</li>
+        <li>3. Carteras</li>
+        <li>4. Trajes de baño</li>
+        <li>Seleccione una opción</li>
+    </ul>
+    <div class="Seleccion">
+        <input type="text" placeholder="Ingrese opción" #optionSL>
+        <button  class="btn btn-danger mx-2" (click)="seleccionO(optionSL)"> Enviar</button>
+    </div>
+    <div class="ResultadoOpcion" [ngSwitch]="opcionSeleccionada">
+        <span *ngSwitchCase="1">**************VESTIDOS*************</span>
+        <span *ngSwitchCase="2">**************PANTALONES*************</span>
+        <span *ngSwitchCase="3">**************CARTERAS*************</span>
+        <span *ngSwitchCase="4">**************TRAJES DE BAÑO*************</span>
+        <span *ngSwitchDefault>Ingrese una opción válida</span>
+    </div>
+</div>

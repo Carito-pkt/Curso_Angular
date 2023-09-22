@@ -1,0 +1,19 @@
+<h1>Benvenido a Coffe and Tea</h1>
+<h2>Este es nuestro menú</h2>
+<div>
+    <span>1. Cafe</span>
+    <span>2. Pan</span>
+    <span>3. Te</span>
+    <span>4. Leche con café</span>
+    <span>Escoja una opción</span>
+    <input type="text" placeholder="Ingrese opción" #opcion>
+    <button (click)="asignarOpcion(opcion)">Enviar opción </button>
+</div>
+
+<div [ngSwitch]="opcionE">
+    <span *ngSwitchCase="'1'">Escojiste café </span>
+    <span *ngSwitchCase="'2'">Esocjiste Pan</span>
+    <span *ngSwitchCase="'3'">Esocjiste Té</span>
+    <span *ngSwitchCase="'4'">Esocjiste Leche con cafe</span>
+    <span *ngSwitchDefault>Elige una opción válida</span>
+</div>
