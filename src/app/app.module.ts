@@ -8,7 +8,9 @@ import { FotografiaComponent } from './fotografia/fotografia.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchesComponent } from './switches/switches.component';
-import { PracticaSwComponent } from './practica-sw/practica-sw.component'; //importo el typescript
+import { PracticaSwComponent } from './practica-sw/practica-sw.component';
+import { Formulario2Component } from './formulario2/formulario2.component'; //importo el typescript
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,10 +20,12 @@ import { PracticaSwComponent } from './practica-sw/practica-sw.component'; //imp
     FormularioComponent,
     BuclesComponent,
     SwitchesComponent,
-    PracticaSwComponent
+    PracticaSwComponent,
+    Formulario2Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
