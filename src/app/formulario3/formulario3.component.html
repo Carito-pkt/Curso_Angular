@@ -1,22 +1,27 @@
 <div class="card">
     <div class="card-body">
-        <form >
+        <form [formGroup]="formUser" (ngSubmit)="procesar()">
         <div class="mb-2">
             <label for="form-label">Nombre</label>
-            <input type="text" [formControl]="name" class="form-control" placeholder="Ingrese Nombre">
+            <input type="text" formControlName="name" class="form-control" placeholder="Ingrese Nombre">
+            <!--mensaje alerta-->
+            <div class="alert alert-danger mt-2" [hidden]="getName.valid || getName.pristine">
+                El nombre es obligatorio
+            </div>
         </div>
 
         <div class="mb-2">
             <label for="form-label">Email</label>
-            <input type="email" [formControl]="email" class="form-control" placeholder="Ingrese email">
+            <input type="email" formControlName="email" class="form-control" placeholder="Ingrese email">
+            <!--mensajes de alerta-->
+            <div class="alert alert-danger mt-2" [hidden]="getEmail.valid || getEmail.pristine">
+                <span *ngIf="formUser.get('email')?.errors?.['required']">El email es obligatorio</span>
+                <span *ngIf="formUser.get('email')?.errors?.['email']">El email debe ser válido</span>
+            </div>
         </div>
 
-        <button class="btn btn-primary">Enviar</button>
+        <button class="btn btn-primary" [disabled]="formUser.invalid">Enviar</button>
 
         </form>
     </div>
 </div>
-
-{{name.value}}
-<br>
-{{email.value}}
